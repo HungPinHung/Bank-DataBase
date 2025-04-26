@@ -1,0 +1,5 @@
+{
+    "defaultUsername": "admin@example.com",
+    "defaultPassword": "admin123",
+    "loginMessage": "請輸入帳號密碼登入"
+}

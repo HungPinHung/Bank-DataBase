@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" onclick="parent.close_contextmenu();">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>儀錶板</title>
+
+        <link href="Panel.css" rel="stylesheet" />
+
+        <link href="../__MODULE/Fontawesome/css/fontawesome.css" rel="stylesheet" />
+        <link href="../__MODULE/Fontawesome/css/brands.css" rel="stylesheet" />
+        <link href="../__MODULE/Fontawesome/css/solid.css" rel="stylesheet" />
+
+        <script src="contentmenu.js"></script>
+
+        <script src="table.js"></script>
+
+        <script src="Search_Trade_Rec.js"></script>
+    </head>
+    <body>
+        <p class="Page_title">
+            查詢交易紀錄
+        </p>
+
+        <div class="Panel_Control">
+            <input type="text" placeholder="使用者UUID" content-block-tag='UUID'/>
+            <button onclick="search()">查詢</button>
+            <p class="SQL_command" content-block-tag="SQL_command">
+                 
+            </p>
+        </div>
+
+        <table class="Panel_table" content-block-tag="data_table">
+
+        </table>
+    </body>
+</html>

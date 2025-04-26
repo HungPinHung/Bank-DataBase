@@ -1,0 +1,133 @@
+html, body{
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    display: flex;
+    flex-direction: row;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    margin: max(1.5vw,10px);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.Page_title{
+    margin: 0;
+    padding: 0;
+
+    font-size: max(2.5vw,20px);
+}
+
+.Panel{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.Panel_content_block{
+    --block-size : 33%;
+    --block-padding : max(.5vw,5px);
+    --block-margin : max(1vw,20px);
+
+    --block-height : 7vw;
+
+    flex: 1;
+
+    height: calc(var(--block-height));
+
+    min-width: calc(var(--block-size) - (var(--block-padding) * 2));
+
+    margin: var(--block-margin) 0;
+    padding: var(--block-padding);
+    border-radius: max(.3vw,8px);
+}
+
+.Panel_content_block > *{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.Panel_content_block > .Panel_content_block_title{
+    height: fit-content;
+
+    font-size: max(calc(var(--block-height) / 5), 12px);
+    font-weight: 900;
+}
+
+.Panel_content_block > .Panel_content_block_content{
+    min-height: fit-content;
+
+    font-size: max(calc(var(--block-height) / 3), 10px);
+}
+
+.Panel_content_block.alert{
+    height: fit-content;
+
+    min-height: fit-content;
+    min-width: calc(100% - (var(--block-padding) * 2));
+    max-width: 100%;
+}
+
+.alert.red_alert{
+    border: 1px solid rgb(255, 0, 0);
+
+    background-color: rgb(255, 185, 185);
+}
+
+.alert > .Panel_content_block_content{
+    font-size: max(1vw, 10px);
+    color: rgb(80, 0, 0);
+}
+
+
+
+
+/* 表單 */
+.Panel_Control{
+    margin: max(1vw,5px) 0;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    align-items: center;
+}
+
+.Panel_Control > *{
+    min-width: fit-content;
+
+    margin-right: max(.5vw,5px);
+}
+
+.SQL_command{
+    margin: 0;
+    padding: 0;
+}
+
+.Panel_table{
+    width: 100%;
+
+    padding: max(5px,1vw);
+
+    border-radius: max(10px,.6vw);
+
+    backdrop-filter: blur(20px) brightness(1.4);
+    -webkit-backdrop-filter: blur(20px) brightness(1.4);
+    
+    border-collapse: collapse;
+
+    overflow: hidden;
+}
+
+.Panel_table > thead{   
+    background-color: #777777;
+    color: white;
+}
